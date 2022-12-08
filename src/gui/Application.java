@@ -87,6 +87,8 @@ public class Application {
 			}
 		});
 		
+		
+		
 		registerPane.btnRegister.addActionListener(new ActionListener() {
 			
 			@Override
