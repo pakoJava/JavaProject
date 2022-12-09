@@ -11,7 +11,7 @@ public class Database {
 		 
 	        try{
 	            Class.forName("com.mysql.cj.jdbc.Driver");
-	            this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/aereodb", "root", "EntraMysql_22");
+	            this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/aereodb", "root", "password");
 	        }catch(SQLException | ClassNotFoundException e)
 	        {
 	            throw new RuntimeException(e);
@@ -33,7 +33,7 @@ public class Database {
 
             for(int i=0; i< param.length; i++)
             {
-                prepStat.setObject(i+1, param[i]); //indice: i+1 perchè si parte da 1 e indica la risposta al ? nella query.  valore: param[i]
+                prepStat.setObject(i+1, param[i]); //indice: i+1 perchï¿½ si parte da 1 e indica la risposta al ? nella query.  valore: param[i]
             }
 
            rs = prepStat.executeQuery();
